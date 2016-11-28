@@ -6,6 +6,7 @@
 //   { firstName: 'Rich', lastName: 'Warren', age: 22, type: 'boss' },
 // ];
 const getUsers = require('./get_users.js');
+const addUser = require('./create_user.js');
 
 const home = {
   method: 'GET',
@@ -18,6 +19,18 @@ const home = {
   },
 };
 
+const add = {
+  method: 'POST',
+  path: '/add',
+  handler(req, reply) {
+    addUser((error, data) => {
+      if (error) console.log('oops', error);
+      reply(data);
+    });
+  },
+};
+
 module.exports = [
   home,
+  add,
 ];
