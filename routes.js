@@ -5,16 +5,16 @@
 //   { firstName: 'Matt', lastName: 'Sharp', age: 24, type: 'hipster' },
 //   { firstName: 'Rich', lastName: 'Warren', age: 22, type: 'boss' },
 // ];
-
-const pg = require('pg').native;
-const pool = pg.Pool;
-const client = pg.Client;
+const getUsers = require('./get_users.js');
 
 const home = {
   method: 'GET',
   path: '/',
   handler(req, reply) {
-    reply.view('users', { users });
+    getUsers((error, users) => {
+      if (error) console.log('oops', error);
+      reply.view('users', { users });
+    });
   },
 };
 
