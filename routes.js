@@ -1,10 +1,14 @@
 
-const users = [
-  { firstName: 'Matt', lastName: 'Glover', age: 25, type: 'worker' },
-  { firstName: 'Sam', lastName: 'Galson', age: 30, type: 'professor' },
-  { firstName: 'Matt', lastName: 'Sharp', age: 24, type: 'hipster' },
-  { firstName: 'Rich', lastName: 'Warren', age: 22, type: 'boss' },
-];
+// const users = [
+//   { firstName: 'Matt', lastName: 'Glover', age: 25, type: 'worker' },
+//   { firstName: 'Sam', lastName: 'Galson', age: 30, type: 'professor' },
+//   { firstName: 'Matt', lastName: 'Sharp', age: 24, type: 'hipster' },
+//   { firstName: 'Rich', lastName: 'Warren', age: 22, type: 'boss' },
+// ];
+
+const pg = require('pg').native;
+const pool = pg.Pool;
+const client = pg.Client;
 
 const home = {
   method: 'GET',

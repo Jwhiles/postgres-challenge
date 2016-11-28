@@ -16,5 +16,7 @@ INSERT INTO users (firstName, lastName, age, type) VALUES ('Matt', 'Sharp', 24, 
 INSERT INTO users (firstName, lastName, age, type) VALUES ('Rich', 'Warren', 22, 'boss');
 INSERT INTO users (firstName, lastName, age, type) VALUES ('Cleo', 'Pearson', 24, 'badass developer');
 INSERT INTO users (firstName, lastName, age, type) VALUES ('John', 'Whiles', 24, 'enigma');
+INSERT INTO users (firstName, lastName, age, type) VALUES ('Joan', 'of Arc', 604, 'martyr');
+
 
 COMMIT;

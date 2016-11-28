@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nodemon server",
     "lint": "eslint './**/*.js'",
-    "precommit": "npm run lint",
     "start": "node server"
   },
   "repository": {
